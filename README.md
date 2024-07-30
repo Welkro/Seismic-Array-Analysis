@@ -159,7 +159,7 @@ In addition to waveform and velocity visualizations, displacement and accelerati
 
 ### Dashboard Visualization
 
-This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined aforementioend data from WAR1 sensor into one dashboard
+This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined aforementioned data from WAR1 sensor into one dashboard
 
 ![1722330363886](image/README/1722330363886.png)
 
