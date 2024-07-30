@@ -14,23 +14,23 @@ LightningChart Python is an excellent tool for visualizing large-scale seismic d
 
 ### Installing Python and Necessary Libraries
 
-Ensure you have Python installed. You can download it from [python.org](https://www.python.org/).
+Ensure you have [Python ](https://www.python.org/downloads/)installed.
 
 ### Overview of Libraries Used
 
-- **NumPy:** For numerical operations
-- **Pandas:** For data manipulation and analysis
-- **ObsPy:** For accessing and processing seismic data
-- **LightningChart:** For advanced data visualization
+- **[NumPy](https://numpy.org/):** For numerical operations
+- **[Pandas](https://pandas.pydata.org/):** For data manipulation and analysis
+- **[ObsPy](https://docs.obspy.org/):** For accessing and processing seismic data
+- **[LightningChart Python](https://lightningchart.com/python-charts/):** For advanced high performance data visualization
 
 ### Setting Up Your Development Environment
 
-1. Install Python from [python.org](https://www.python.org/).
+1. Install Python.
 2. Use `pip` to install the required libraries:
-
-```sh
-pip install numpy pandas obspy lightningchart-python
-```
+   ```shell
+   pip install numpy pandas obspy lightningchart
+   ```
+3. Set up your development environment by creating a new project directory and installing the required libraries. Ensure that LightningChart Python is properly licensed and configured.
 
 ## Loading and Processing Data
 
@@ -110,9 +110,20 @@ Accessing the complete dataset was time-consuming, and data retrieval through Ob
 
 ### Note to Readers
 
-Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.
+Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.  `seismicAnalysis_Netherlands.ipynb`
+
+### Map View
+
+![1722331299548](image/README/1722331299548.png)
+
+### Satellite View
+
+![1722331337555](image/README/1722331337555.png)
+
+These images help visualize the geographic distribution of the sensors.
 
 ## Sources
 
 * [GEOFON](https://geofon.gfz-potsdam.de/doi/network/1C/2016)
 * [EGU - European Geoscienses Union](https://nhess.copernicus.org/articles/22/41/2022/#Ch1.F2)
+* Google Maps
