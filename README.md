@@ -69,6 +69,60 @@ Preprocess the data to handle missing values, normalize the data, and apply nece
 
 Here's an example of a visualization from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we generate waveform graphs to visualize seismic activity over time. This involves plotting raw waveform data for each sensor component.
 
+```python
+# Initialize the client to fetch data from GFZ
+client = Client("GFZ")
+
+# Define the start and end time for the data retrieval
+# We are using the previously used start and end times
+starttime = starttime
+endtime = endtime
+station = "WAR1"
+
+# Fetch waveforms for all three components (Z, E, N) from the specified station and time range
+st = client.get_waveforms(network="1C", station=station, location="--", channel="HH?", starttime=starttime, endtime=endtime)
+st.merge(method=1)
+
+# Separate the components into individual traces
+tr_z = st.select(channel="HHZ")[0]
+tr_e = st.select(channel="HHE")[0]
+tr_n = st.select(channel="HHN")[0]
+
+# Calculate time values for the traces and adjust for UTC+3
+times_seconds = tr_z.times().tolist()  # Get the times in seconds
+start_time_ms = tr_z.stats.starttime.timestamp * 1000  # Convert start time to milliseconds
+offset_seconds = 3 * 3600  # Offset for UTC+3 in seconds
+times = [start_time_ms + (sec - offset_seconds) * 1000 for sec in times_seconds]  # Adjust times
+
+# Get data values for each component
+data_z = tr_z.data.tolist()
+data_e = tr_e.data.tolist()
+data_n = tr_n.data.tolist()
+
+# Create a chart with dark theme
+chart = lc.ChartXY(
+    theme=lc.Themes.Dark,
+    title='Seismic Waveform for All WAR1 Components'
+)
+
+# Remove the default x-axis and set up a custom one
+chart.get_default_x_axis().dispose()
+chart.get_default_y_axis().set_title("Raw count")
+
+x_axis = chart.add_x_axis(axis_type='linear-highPrecision')
+x_axis.set_tick_strategy('DateTime')  # Set the x-axis to display date-time values
+x_axis.set_scroll_strategy('progressive')
+x_axis.set_title("Time")
+
+# Add waveform series for each component to the chart
+waveform_series_z = chart.add_line_series().append_samples(x_values=times, y_values=data_z).set_name('HHZ').set_line_thickness(2)
+waveform_series_e = chart.add_line_series().append_samples(x_values=times, y_values=data_e).set_name('HHE').set_line_thickness(2)
+waveform_series_n = chart.add_line_series().append_samples(x_values=times, y_values=data_n).set_name('HHN').set_line_thickness(2)
+
+# Open the chart
+chart.open()
+```
+
 ![1722335508097](image/README/1722335508097.png)
 
 ### Customizing Visualizations
