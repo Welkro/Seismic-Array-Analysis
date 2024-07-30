@@ -161,7 +161,7 @@ This visualization is also from the Jupyter Notebook file `seismicAnalysis_Nethe
 
 ## Additional Context
 
-The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences both natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast.
+The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast, where this temporary array of sensors was also installed. Additionally, we do not know from the source whether the ground around the sensors was being stimulated, so we cannot be 100% sure of the cause of the recorded ground movements.
 
 ## Challenges Encountered
 
@@ -169,7 +169,7 @@ Accessing the complete dataset was time-consuming, and data retrieval through Ob
 
 ## Note to Readers
 
-Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.  `seismicAnalysis_Netherlands.ipynb`
+Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps. `seismicAnalysis_Netherlands.ipynb`
 
 ## Conclusion
 
