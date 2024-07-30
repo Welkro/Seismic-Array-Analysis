@@ -67,7 +67,9 @@ Preprocess the data to handle missing values, normalize the data, and apply nece
 
 ### Creating Waveform Graphs
 
-Generate waveform graphs to visualize seismic activity over time. This involves plotting raw waveform data for each sensor component.
+Here's an example of a visualization from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we generate waveform graphs to visualize seismic activity over time. This involves plotting raw waveform data for each sensor component.
+
+![1722335508097](image/README/1722335508097.png)
 
 ### Customizing Visualizations
 
@@ -86,6 +88,8 @@ Utilize LightningChart to display real-time seismic activity data, providing imm
 In addition to waveform and velocity visualizations, displacement and acceleration charts were created. These visualizations typically show lower values due to the sensors' focus on detecting microseismic events. Microseismicity involves small-scale seismic events with minor ground movements, leading to lower values in these physical units.
 
 ### Dashboard Visualization
+
+This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined different kinds of data from WAR1 sensor into one dashboard
 
 ![1722330363886](image/README/1722330363886.png)
 
