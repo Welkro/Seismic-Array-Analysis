@@ -2,7 +2,7 @@
 
 ## Note to Readers
 
-This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to fully understand the data processing and visualization techniques employed in this project.
+This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to understand this project's data processing and visualization techniques fully.
 
 ## Introduction
 
@@ -169,7 +169,7 @@ The sensors used in this project were installed at a depth of 1 meter and design
 
 ## Challenges Encountered
 
-Accessing the complete dataset was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
+Accessing the complete 49 days worth of data was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis.
 
 ## Conclusion
 
