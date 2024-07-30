@@ -2,7 +2,7 @@
 
 ## Note to Readers
 
-This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to understand this project's data processing and visualization techniques fully.
+This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to understand this project's data processing and visualization techniques fully. The array setup and shallow sensor depth further contribute to the complexity.
 
 ## Introduction
 
@@ -162,6 +162,21 @@ In addition to waveform and velocity visualizations, displacement and accelerati
 This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined aforementioned data from WAR1 sensor into one dashboard
 
 ![1722330363886](image/README/1722330363886.png)
+
+This dashboard showcases seismic data collected from station WAR1, visualizing various physical units:
+
+* **Top-Left - Seismic Waveform Data** : Displays the raw seismic data captured over time. High amplitude events around the middle and towards the end of the time frame suggest notable ground movement incidents.
+* **Top-Right - Velocity Data** : Shows the rate of change of displacement, indicating how quickly the ground movement is changing. Data indicates gradual changes in ground movement speed, with peak velocities corresponding to the waveform spikes.
+* **Bottom-Left - Displacement Data** : Represents the total ground movement from the original position. Accumulated ground movement is consistent with the waveform's high-amplitude sections.
+* **Bottom-Right - Acceleration Data** : Illustrates the rate of change of velocity, showing how the speed of the ground movement varies. Sudden changes in velocity suggest quick, significant ground movements during seismic events.
+
+The visualizations display significant peaks in seismic waveform, velocity, displacement, and acceleration data, but the numerical values on the y-axes appear relatively small. This discrepancy can be attributed to the following factors:
+
+1. **Microseismicity Focus** : The sensors are designed to detect small-scale seismic events, hence the amplitude values are inherently low despite appearing large in visual representation.
+2. **High Sensitivity** : The Trillium 120 s broadband sensors used are highly sensitive, capable of capturing minute ground movements which result in low numerical values but noticeable peaks.
+3. **Data Scaling** : The visual scale might exaggerate the appearance of peaks to highlight variations, even though the absolute values remain small.
+
+This indicates that while the peaks are prominent visually, they correspond to small yet significant ground movements as detected by highly sensitive equipment.
 
 ## Additional Context
 
