@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This project focuses on analyzing seismic data collected from a network of sensors in Wittewierum, Netherlands. The dataset provides valuable insights into the region's microseismicity, which is critical for understanding both natural and induced seismic activities. These sensors, installed at a shallow depth of approximately 1 meter, were primarily designed to monitor microseismic events. The shallow installation allows for high-resolution data collection of local seismic activity, although it also makes the sensors susceptible to recording surface-level activities.
+This project focuses on analyzing seismic data collected from a network of sensors in Wittewierum, Netherlands. The dataset provides valuable insights into the region's microseismicity, critical for understanding natural and induced seismic activities. These sensors, installed at a shallow depth of approximately 1 meter, were primarily designed to monitor microseismic events. The shallow installation allows for high-resolution data collection of local seismic activity, although it also makes the sensors susceptible to recording surface-level activities.
 
 ## LightningChart Python
 
 ### Overview of LightningChart Python Usability for this Specific Project
 
-LightningChart Python is an excellent tool for visualizing large-scale seismic data due to its high performance and customizable features. In this project, it enabled the creation of detailed and interactive waveform graphs, crucial for analyzing seismic events over time.
+LightningChart Python is an excellent tool for visualizing large-scale seismic data due to its high performance and customizable features. This project enabled the creation of detailed and interactive waveform graphs crucial for analyzing seismic events over time.
 
 ## Setting Up Python Environment
 
@@ -101,15 +101,16 @@ LightningChart Python proved to be an effective tool for handling large-scale se
 
 ### Additional Context
 
-The sensors used in this project were installed at a depth of 1 meter, designed to monitor microseismic events. This shallow installation, while beneficial for high-resolution data collection, also made the sensors prone to picking up surface activities. The Netherlands experiences both natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast.
+The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data
+collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences both natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast.
 
 ### Challenges Encountered
 
-Accessing the complete dataset was time-consuming, with data retrieval through ObsPy proving to be inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
+Accessing the complete dataset was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
 
 ### Note to Readers
 
-For detailed code examples and visualizations, please refer to the accompanying Jupyter Notebook file. The notebook provides comprehensive insights into the data processing and visualization steps undertaken in this project.
+Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.
 
 ## Sources
 
