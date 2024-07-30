@@ -38,7 +38,17 @@ Ensure you have [Python ](https://www.python.org/downloads/)installed.
 
 The seismic data is collected from sensors installed at a depth of 1 meter in Wittewierum, Netherlands. These high-gain sensors were operational from July 12, 2016, to August 29, 2016, with some outages. The dataset includes three components (HHE, HHN, and HHZ) from each station, recording continuous seismic activity.
 
-### How to Load Data Files
+#### Map of Sensor Locations
+
+![1722339142828](image/README/1722339142828.png)
+
+#### Satellite image with Sensor Locations
+
+![1722339188982](image/README/1722339188982.png)
+
+These images help visualize the geographic distribution of the sensors.
+
+### How to Load the Data
 
 Using ObsPy, you can access and download the seismic data:
 
@@ -55,13 +65,23 @@ station = "WAR1"
 st = client.get_waveforms(network="1C", station=station, location="--", channel="HHZ", starttime=starttime, endtime=endtime)
 ```
 
-### Basic Data Processing Techniques
-
-Process the waveform data to extract meaningful information, such as calculating seismic event magnitudes and filtering noise.
-
 ### Handling and Preprocessing Data
 
-Preprocess the data to handle missing values, normalize the data, and apply necessary filters to enhance data quality. Use Pandas for efficient data manipulation and analysis.
+The data we are mainly preprocessing is the time value, so it would be displayed properly on the charts created by LightningChart Python
+
+```python
+# Get the time values in seconds from the start of the trace
+x_values_seconds = st[0].times().tolist()
+
+# Convert the start time to milliseconds
+start_time = st[0].stats.starttime.timestamp * 1000
+
+# If the time is in UTC+3, subtract 3 hours (10800 seconds) to adjust the time values
+offset_seconds = 3 * 3600
+x_values = [start_time + (sec - offset_seconds) * 1000 for sec in x_values_seconds]
+```
+
+Other notable preprocessing steps include converting raw waveform data into velocity, displacement, and acceleration values, ensuring accurate and meaningful visualizations. This involves numerical differentiation and integration techniques applied to the waveform data.
 
 ## Visualizing Data with LightningChart
 
@@ -125,17 +145,9 @@ chart.open()
 
 ![1722335508097](image/README/1722335508097.png)
 
-### Customizing Visualizations
-
-Tailor the visualizations to highlight specific aspects of the data, such as seismic event magnitudes and trigger points.
-
 ### Streaming and Updating Data in Real-Time
 
 Although not implemented in this project, LightningChart Python allows for real-time data streaming and updating, which is beneficial for continuous monitoring applications.
-
-### Displaying Real-Time Ground Shaking Activity Data
-
-Utilize LightningChart to display real-time seismic activity data, providing immediate insights into ongoing seismic events.
 
 ### Displacement and Acceleration Visualizations
 
@@ -143,42 +155,31 @@ In addition to waveform and velocity visualizations, displacement and accelerati
 
 ### Dashboard Visualization
 
-This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined different kinds of data from WAR1 sensor into one dashboard
+This visualization is also from the Jupyter Notebook file `seismicAnalysis_Netherlands.ipynb` where we combined aforementioend data from WAR1 sensor into one dashboard
 
 ![1722330363886](image/README/1722330363886.png)
+
+## Additional Context
+
+The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences both natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast.
+
+## Challenges Encountered
+
+Accessing the complete dataset was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
+
+## Note to Readers
+
+Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.  `seismicAnalysis_Netherlands.ipynb`
 
 ## Conclusion
 
 ### Recap of the Python Data Processing Workflow
 
-This project demonstrated the process of accessing, processing, and visualizing seismic data using Python and LightningChart. The workflow included data acquisition from ObsPy, preprocessing, and creating detailed visualizations.
+This project demonstrated the process of accessing, processing, and visualizing seismic data using LightningChart Python. The workflow included data acquisition from ObsPy, preprocessing, and creating detailed visualizations.
 
 ### Benefits of Using LightningChart Python
 
 LightningChart Python proved to be an effective tool for handling large-scale seismic data visualizations, offering high performance and customization options crucial for seismic data analysis.
-
-### Additional Context
-
-The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data
-collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences both natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast.
-
-### Challenges Encountered
-
-Accessing the complete dataset was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
-
-### Note to Readers
-
-Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps.  `seismicAnalysis_Netherlands.ipynb`
-
-### Map View
-
-![1722331299548](image/README/1722331299548.png)
-
-### Satellite View
-
-![1722331337555](image/README/1722331337555.png)
-
-These images help visualize the geographic distribution of the sensors.
 
 ## Sources
 
