@@ -1,5 +1,9 @@
 # Seismic Array in Wittewierum, Netherlands – Python Exercise
 
+## Note to Readers
+
+This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to fully understand the data processing and visualization techniques employed in this project.
+
 ## Introduction
 
 This project focuses on analyzing seismic data collected from a network of sensors in Wittewierum, Netherlands. The dataset provides valuable insights into the region's microseismicity, critical for understanding natural and induced seismic activities. These sensors, installed at a shallow depth of approximately 1 meter, were primarily designed to monitor microseismic events. The shallow installation allows for high-resolution data collection of local seismic activity, although it also makes the sensors susceptible to recording surface-level activities.
@@ -166,10 +170,6 @@ The sensors used in this project were installed at a depth of 1 meter and design
 ## Challenges Encountered
 
 Accessing the complete dataset was time-consuming, and data retrieval through ObsPy proved inefficient. Due to time constraints, smaller chunks of data were used to manage the analysis effectively.
-
-## Note to Readers
-
-Please refer to the accompanying Jupyter Notebook file for detailed code examples and visualizations. The notebook provides comprehensive insights into this project's data processing and visualization steps. `seismicAnalysis_Netherlands.ipynb`
 
 ## Conclusion
 
