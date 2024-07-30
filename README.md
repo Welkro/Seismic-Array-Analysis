@@ -174,7 +174,6 @@ The visualizations display significant peaks in seismic waveform, velocity, disp
 
 1. **Microseismicity Focus** : The sensors are designed to detect small-scale seismic events, hence the amplitude values are inherently low despite appearing large in visual representation.
 2. **High Sensitivity** : The Trillium 120 s broadband sensors used are highly sensitive, capable of capturing minute ground movements which result in low numerical values but noticeable peaks.
-3. **Data Scaling** : The visual scale might exaggerate the appearance of peaks to highlight variations, even though the absolute values remain small.
 
 This indicates that while the peaks are prominent visually, they correspond to small yet significant ground movements as detected by highly sensitive equipment.
 
