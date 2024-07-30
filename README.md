@@ -2,11 +2,11 @@
 
 ## Note to Readers
 
-This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to understand this project's data processing and visualization techniques fully. The array setup and shallow sensor depth further contribute to the complexity.
+This article serves as an overview of the project. For detailed visualizations and code examples, it is highly recommended to refer to the accompanying Jupyter Notebook file: `seismicAnalysis_Netherlands.ipynb`. The notebook contains all the code, comments, and outputs necessary to understand this project's data processing and visualization techniques fully. The array setup and shallow sensor depth further contributes to the complexity.
 
 ## Introduction
 
-This project focuses on analyzing seismic data collected from a network of sensors in Wittewierum, Netherlands. The dataset provides valuable insights into the region's microseismicity, critical for understanding natural and induced seismic activities. These sensors, installed at a shallow depth of approximately 1 meter, were primarily designed to monitor microseismic events. The shallow installation allows for high-resolution data collection of local seismic activity, although it also makes the sensors susceptible to recording surface-level activities.
+This project focuses on analyzing seismic data collected from a network of sensors in Wittewierum, Netherlands. The dataset provides valuable insights into the region's microseismicity, critical for understanding natural and induced seismic activities. These sensors, installed at a shallow depth of approximately 1 meter, were primarily designed to monitor microseismic events. The shallow installation allows for data collection of local seismic activity, although it also makes the sensors susceptible to recording surface-level activities.
 
 ## LightningChart Python
 
@@ -179,7 +179,7 @@ This indicates that while the peaks are prominent visually, they correspond to s
 
 ## Additional Context
 
-The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for high-resolution data collection, this shallow installation also made the sensors prone to picking up surface activities. The Netherlands experiences natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast, where this temporary array of sensors was also installed. Additionally, we do not know from the source whether the ground around the sensors was being stimulated, so we cannot be 100% sure of the cause of the recorded ground movements.
+The sensors used in this project were installed at a depth of 1 meter and designed to monitor microseismic events. While beneficial for data collection, this shallow installation also made the sensors prone to picking up surface activities like we have mentioned in the beginning. The Netherlands experiences natural and induced seismic activities, with natural tectonic movements in the southeast and induced seismicity due to gas extraction in the northeast, where this temporary array of sensors was also installed. Additionally, we do not know from the source whether the ground around the sensors was being stimulated, so we cannot be 100% sure of the cause of the recorded ground movements.
 
 ## Challenges Encountered
 
