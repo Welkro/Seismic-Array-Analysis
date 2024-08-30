@@ -139,9 +139,9 @@ x_axis.set_scroll_strategy('progressive')
 x_axis.set_title("Time")
 
 # Add waveform series for each component to the chart
-waveform_series_z = chart.add_line_series().append_samples(x_values=times, y_values=data_z).set_name('HHZ').set_line_thickness(2)
-waveform_series_e = chart.add_line_series().append_samples(x_values=times, y_values=data_e).set_name('HHE').set_line_thickness(2)
-waveform_series_n = chart.add_line_series().append_samples(x_values=times, y_values=data_n).set_name('HHN').set_line_thickness(2)
+waveform_series_z = chart.add_line_series(data_pattern='ProgressiveX').append_samples(x_values=times, y_values=data_z).set_name('HHZ').set_line_thickness(2)
+waveform_series_e = chart.add_line_series(data_pattern='ProgressiveX').append_samples(x_values=times, y_values=data_e).set_name('HHE').set_line_thickness(2)
+waveform_series_n = chart.add_line_series(data_pattern='ProgressiveX').append_samples(x_values=times, y_values=data_n).set_name('HHN').set_line_thickness(2)
 
 # Open the chart
 chart.open()
